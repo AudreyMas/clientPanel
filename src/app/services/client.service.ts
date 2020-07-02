@@ -1,0 +1,11 @@
+import { Injectable } from '@angular/core';
+import {AngularFirestore, AngularFirestoreCollection, AngularFirestoreDocument} from'angularfire2/firestore' // = fetch and Doc = 1client
+import {Observable} from 'rxjs';
+
+@Injectable({
+  providedIn: 'root'
+})
+export class ClientService {
+
+  constructor() { }
+}
