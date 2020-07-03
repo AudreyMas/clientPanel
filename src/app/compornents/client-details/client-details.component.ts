@@ -39,19 +39,22 @@ export class ClientDetailsComponent implements OnInit {
     })
   }
 
-  updateBalance (){
+  updateBalance() {
     this.clientService.updateClient(this.client);
-    this.flashMessage.show('Blance updated',{
-      cssClass:'alert-success', timeout:4000
+    this.flashMessage.show('Blance updated', {
+      cssClass: 'alert-success', timeout: 4000
     });
   }
 
+  onDelteClick() {
+    if (confirm('Are you sure?')) {
+      this.clientService.deleteClient(this.client) // deletClient = service;
+      this.flashMessage.show('client removed', {
+        cssClass: 'alert-success', timeout: 4000
+      });
+      this.router.navigate(['/']);
 
-
-
-
-
-  onDelteClick(){
+    }
 
   }
 
